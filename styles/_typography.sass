@@ -1,0 +1,139 @@
+@use "variables"
+@import "breakpoints"
+@font-face
+  font-family: 'Formular'
+  src: local('Formular'), local('Formular'), url('../public/fonts/Formular.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+
+@font-face
+  font-family: 'Formular'
+  src: local('Formular Medium'), local('Formular-Medium'), url('../public/fonts/Formular-Medium.ttf') format('truetype')
+  font-weight: 500
+  font-style: normal
+
+
+@font-face
+  font-family: 'Formular'
+  src: local('Formular Bold'), local('Formular-Bold'), url('../public/fonts/Formular-Bold.ttf') format('truetype')
+  font-weight: 600
+  font-style: normal
+
+@font-face
+  font-family: 'Poppins'
+  src: local('Poppins SemiBold'), local('Formular-SemiBold'), url('../public/fonts/Poppins-SemiBold.ttf') format('truetype')
+  font-weight: 600
+  font-style: normal
+
+@font-face
+  font-family: 'SF-ProText-Regular'
+  src: local('SF Pro Text Regular'), local('SF-ProText-Regular'), url('../public/fonts/SF-ProText-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
+// TYPOGRAPHY
+h1, .t-xxl
+  font-weight: 500
+  font-size: clamp(22px, calc(1vw + 40px), 60px)
+  line-height: 107%
+  letter-spacing: -0.05em
+  word-break: break-word
+
+
+h2, .t-xl
+  font-style: normal
+  font-weight: bold
+  font-size: clamp(20px, calc(1vw + 28px), 48px)
+  line-height: 100%
+  letter-spacing: -0.04em
+  word-break: break-word
+
+
+h3, .t-l
+  font-style: normal
+  font-weight: bold
+  font-size: clamp(20px, calc(1vw + 16px), 36px)
+  line-height: 125%
+  letter-spacing: -0.025em
+  word-break: break-word
+
+
+h4, .t-m
+  font-style: normal
+  font-weight: bold
+  font-size: 20px
+  line-height: 114%
+  letter-spacing: -0.025em
+  word-break: break-word
+  @include min-width($Mobile)
+    font-size: 28px
+
+
+h5, .t-s
+  font-style: normal
+  font-weight: 500
+  font-size: clamp(14px, calc(1vw + 4px), 24px)
+  line-height: 133%
+  letter-spacing: -0.03em
+  word-break: break-word
+
+
+h6, .t-xs
+  font-style: normal
+  font-weight: 500
+  font-size: clamp(12px, calc(1vw), 20px)
+  line-height: 150%
+  letter-spacing: -0.025em
+  word-break: break-word
+  @include min-width($TabletL)
+    font-size: 20px
+    font-weight: 500 !important
+
+.op-6
+  opacity: 0.6
+
+.op-10
+  opacity: 1
+
+.subtitle
+  font-style: normal
+  font-weight: 500
+  font-size: 16px
+  line-height: 150%
+  letter-spacing: -0.02em
+
+
+.large
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 171%
+  letter-spacing: -0.01em
+
+
+.medium
+  font-style: normal
+  font-weight: normal
+  font-size: 12px
+  line-height: 167%
+  letter-spacing: -0.015em
+
+.small
+  font-style: normal
+  font-weight: normal
+  font-size: 10px
+  line-height: 160%
+  letter-spacing: -0.005em
+
+.bold
+  font-weight: bold
+
+// Fonts
+.secondary
+  font-family: variables.$secondaryFont
+
+// COLORS
+.pink
+  color: variables.$pink !important

@@ -1,0 +1,70 @@
+@import "styles/breakpoints"
+
+.slide
+  height: 100%
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  position: relative
+
+.content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+
+  width: 100%
+  height: calc(100% - 96px)
+
+  padding-bottom: 96px
+
+  @include des-l
+    height: calc(100% - 126px)
+    padding-bottom: 126px
+
+
+.image-wrapper
+  width: 100%
+  position: relative
+
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+
+.img
+  width: 100%
+  height: auto
+
+  object-fit: contain
+
+.text
+  padding: 0 20px 0 64px
+  max-width: 100%
+  @include des-l
+    padding-left: 10%
+    width: 500px
+  @include des-xl
+    padding-left: 17.3%
+
+  p
+    width: 100%
+
+.slide-0-img
+  align-items: flex-end
+  justify-content: center
+  align-self: center
+
+  transform: translateY(-44px)
+  max-width: calc(100% - 60px)
+  @include min-width($DesktopL)
+    transform: translateY(-52px)
+
+.slide-1-img
+  align-self: center
+  width: calc(100% - 200px)
+  max-width: 350px
+
+

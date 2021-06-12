@@ -1,0 +1,18 @@
+@import "styles/breakpoints"
+
+.login-with
+  margin-top: 50px
+  @include min-width($Mobile)
+    margin-top: max(50px, 11vh)
+  @include min-width($TabletP)
+    margin-top: max(50px, 16vh)
+  @include min-width($TabletL)
+    margin-top: 30px
+  @include min-width($DesktopL)
+
+  button
+    width: 47.7%
+
+.hr-content
+  &:before
+    content: 'Or Log in with'

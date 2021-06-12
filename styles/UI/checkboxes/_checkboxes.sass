@@ -1,0 +1,53 @@
+@use "../../variables"
+
+input[type="checkbox"]
+  display: none
+
+
+  & + label
+    display: block
+    width: fit-content
+    padding-left: 32px
+    cursor: pointer
+    position: relative
+
+
+  & + label::before
+    content: ''
+
+    position: absolute
+    left: 0
+    top: 0
+
+    min-width: 24px
+    height: 24px
+    margin-right: 8px
+
+    box-sizing: border-box
+
+    border-radius: 8px
+    border-width: 1px
+    border-style: solid
+
+    transition: .1s ease
+
+  &.error + label::before
+    border-color: variables.$red !important
+
+
+  &:checked + label::before
+    border-color: transparent
+
+
+  & + label::after
+    content: ''
+    top: 0
+    left: 0
+    width: 24px
+    height: 24px
+    position: absolute
+    background: transparent
+
+
+  &:checked + label::after
+    background: url(../../../public/icons/checked.svg) center / 100% no-repeat

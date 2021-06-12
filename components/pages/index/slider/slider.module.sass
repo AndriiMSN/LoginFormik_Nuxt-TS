@@ -1,0 +1,21 @@
+@import "styles/breakpoints"
+.slider
+  display: none
+  flex: 0 1 100%
+  max-width: 644px
+  height: 628px
+  border-radius: 52px
+  @include min-width($TabletL)
+    display: flex
+  @include min-width($DesktopL)
+    height: 772px
+    max-width: 828px
+  @include des-s
+    width: calc(100% - 462px)
+    margin-left: 40px
+  @include des-l
+    width: calc(100% - (462px + 9vw))
+    margin-left: 9vw
+  @include des-xl
+    width: calc(100% - (544px + 9vw))
+

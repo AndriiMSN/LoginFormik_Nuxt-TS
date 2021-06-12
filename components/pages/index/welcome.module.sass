@@ -1,0 +1,71 @@
+@import "styles/breakpoints"
+
+.container
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  width: calc(100% - 32px)
+  padding: 16px 16px 24px
+  @include min-width($TabletL)
+    justify-content: space-between
+  @include tab-p
+    padding: 24px
+    width: calc(100% - 48px)
+  @include tab-l
+    padding: 60px
+    width: calc(100% - 120px)
+  @include des-s
+    padding: 52px 40px
+    width: calc(100% - 80px)
+  @include des-l
+    padding: 64px 4.5vw 64px 12vw
+    width: calc(100% - (16.5vw))
+  @include des-xl
+    padding: 64px 6.25vw 64px 13.6vw
+    width: calc(100% - 19.85vw)
+    max-width: 1538px
+
+.wrapper
+  width: 100%
+  max-width: 488px
+  position: relative
+
+  display: flex
+  flex-direction: column
+
+  height: fit-content
+
+  @include min-width($TabletL)
+    max-width: 422px
+    min-height: 628px
+  @include min-width($DesktopL)
+    min-height: 774px
+  @include min-width($DesktopXL)
+    max-width: 544px
+
+  form button
+    width: 100%
+    @include min-width($Mobile)
+      width: unset
+
+
+.title
+  margin-bottom: 60px
+  text-align: center
+  @include min-width($Mobile)
+    margin-bottom: max(60px, 12.5vh)
+  @include min-width($TabletP)
+    margin-bottom: max(60px, 16.8vh)
+  @include min-width($TabletL)
+    margin-bottom: 44px
+    text-align: left
+  @include min-width($DesktopL)
+
+.mode
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+

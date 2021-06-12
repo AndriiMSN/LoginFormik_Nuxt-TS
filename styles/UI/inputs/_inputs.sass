@@ -1,0 +1,58 @@
+@use "../../variables"
+
+.input-default
+  width: 100%
+  height: 64px
+  padding: 28px 24px 12px
+
+  font-size: 16px
+  line-height: 171%
+  letter-spacing: -0.01em
+
+  border-width: 1px
+  border-style: solid
+  box-sizing: border-box
+  border-radius: 16px
+  outline: transparent
+
+  transition: .3s ease
+
+  &:focus
+    border-color: variables.$pink
+
+  &.error
+    color: variables.$red
+    border-color: variables.$red
+
+    & + label
+      color: variables.$red !important
+
+  & + label
+    font-size: 16px
+    line-height: 171%
+    letter-spacing: -0.01em
+    pointer-events: none
+
+    position: absolute
+    top: 20px
+    left: 24px
+    transition: .1s ease
+
+  &:focus + label,
+  & + label.input-focused
+    color: variables.$grey
+    font-size: 10px
+    line-height: 160%
+    top: 12px
+
+.input-error
+  font-family: variables.$thirdFont
+  color: variables.$red
+
+  font-style: normal
+  font-weight: normal
+  font-size: 10px
+  line-height: 160%
+  letter-spacing: -0.005em
+
+

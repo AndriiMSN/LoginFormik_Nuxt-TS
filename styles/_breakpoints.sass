@@ -1,0 +1,46 @@
+$DesktopXL: 1920px
+$DesktopL: 1440px
+$TabletL: 992px
+$TabletP: 768px
+$Mobile: 552px
+
+// < 552
+@mixin mob
+  @media (max-width: #{$Mobile - 1px})
+    @content
+
+// 552 - 767
+@mixin tab-p
+  @media (min-width: #{$Mobile}) and (max-width: #{$TabletP})
+    @content
+
+// 768 - 991
+@mixin tab-l
+  @media (min-width: #{$TabletP}) and (max-width: #{$TabletL})
+    @content
+
+// 992 - 1439
+@mixin des-s
+  @media (min-width: #{$TabletL}) and (max-width: #{$DesktopL})
+    @content
+
+// 1440 - 1919
+@mixin des-l
+  @media (min-width: #{$DesktopL}) and (max-width: #{$DesktopXL})
+    @content
+
+@mixin des-xl
+  @media (min-width: #{$DesktopXL})
+    @content
+
+
+// Custom devices
+@mixin min-width($screen)
+  @media (min-width: $screen)
+    @content
+
+@mixin max-width($screen)
+  @media (max-width: $screen)
+    @content
+
+
